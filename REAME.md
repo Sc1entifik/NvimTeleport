@@ -13,7 +13,7 @@ In short teleport.sh is a bash file which will quickly allow you to swap your co
 
 NVIM always looks for it's config files in the same locations. This means you can have a spare set of configuration files which you know work somewhere NVIM does not look and if you mess up your active config by tinkering with it you can copy your spare config file folder over the one that NVIM uses and there you instantly have a working config again!
 
-If we take this concept one step further when we add new things to our configs that we like we can teleport those configs, Push them to your own GIT repository, swap them back, Do a GIT pull and you have instant version control over your configs. This also allows us to experiment with having configs in different GIT branches and do cool things like pull your GIT setup on any computer you feel like remotely. 
+If we take this concept one step further when we add new things to our configs that we like we can teleport those configs, Push them to our own GIT repository, swap them back, Do a GIT pull and you have instant version control over your configs. This also allows us to experiment with having configs in different GIT branches and do cool things like pull your GIT setup on any computer you feel like remotely. 
 
 ## Why Not Just Use An IDE?
 Here are just a few of the reasons to use NVIM over an IDE:
