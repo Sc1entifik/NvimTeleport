@@ -25,6 +25,8 @@ require('lazy').setup({
   --mason language server support
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
+  --nvim-treesitter
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   -- LSP Support
   {
     'VonHeikemen/lsp-zero.nvim',
