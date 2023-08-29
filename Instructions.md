@@ -47,7 +47,7 @@ Some troubleshooting tips:
 ## Known Requirements
 These are some things you need installed in order to get this configuration to work.
 
-- [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) - This is needed to get telescope file searching by GREP working. This feature is incredibly useful. shortcut "<leader>gg"
+- [https://github.com/BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) - This is needed to get telescope file searching by GREP working. This feature is incredibly useful. shortcut ```<leader>gg```
 
 - [https://github.com/neovim/neovim/wiki/Installing-Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim) - If you installed NVIM from your linux repository you probably have a fairly old version of NVIM. Get the newest or you will run into a bunch of cool stuff that you want working not working. Go to the Releases link on this site and get the newest development build. 
 
