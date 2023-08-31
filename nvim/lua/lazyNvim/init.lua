@@ -32,6 +32,9 @@ require('lazy').setup({
     'nvim-telescope/telescope.nvim', branch = '0.1.x',
       dependencies = { 'nvim-lua/plenary.nvim' }
   },
+	--autopairs
+	{'jiangmiao/auto-pairs'},
+	--configures vertical code indentation lines
 	{ "lukas-reineke/indent-blankline.nvim" },
   -- LSP Support
   {
