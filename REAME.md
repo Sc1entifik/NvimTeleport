@@ -1,19 +1,25 @@
 # NVIM Configs And NVIM Teleport Project
 
+## How To Use
+IMPORTANT READ THIS!!! Do not directly clone this project with git clone. Instead fork the project to your projects and then clone it from the fork. Otherwise when you git push your configs git will try to push it to my repository  and not yours.
+
 ## Purpose
-I am creating this project to help people like myself set up their NVIM from scratch and to add/remove/swapout plugins/setups without the fear of messing up their installations. 
+I am creating this project to help people like myself who love NVIM but are tired of worrying about blowing up their configs every time they want to add a plug in or feature. 
 
 ## Files included
- - teleport.sh - This file allows you to swap your current config out for a standby which lives where you cloned this git repository. If you don't like what you see no worries just run the script again to swap it back.
- - nvim folder which holds the config file structure and lua files.
- - Instructions.md which give you more details about how everything works.
+ - teleport.sh 
+    - Bash script which allows you to swap the current config out with the one held in reserve. You can save the reserve config with a git push or overwrite it with a git pull. 
+ - nvim folder 
+    - Holds the config file structure and lua files. Includes fantastic starter config with no bloat yet has features such as grep fuzzy finder and Mason LSP support. Seriously this config has no bloat!
+ - Instructions.md 
+    - Detailed project instructions.
 
 ## What Is Teleport?
 In short teleport.sh is a bash file which will quickly allow you to swap your config file folder out with a spare stored somewhere NVIM doesn't look.
 
-NVIM always looks for it's config files in the same locations. This means you can have a spare set of configuration files which you know work somewhere NVIM does not look and if you mess up your active config by tinkering with it you can copy your spare config file folder over the one that NVIM uses and there you instantly have a working config again!
+NVIM always looks for it's config files in the same locations. This means you can have a spare set of configuration files which you know work somewhere NVIM does not look and if you mess up your active config by tinkering with it you can copy your spare config file folder over the one that NVIM uses and you instantly have a working config again!
 
-If we take this concept one step further when we add new things to our configs that we like we can teleport those configs, Push them to our own GIT repository, swap them back, Do a GIT pull and you have instant version control over your configs. This also allows us to experiment with having configs in different GIT branches and do cool things like pull your GIT setup on any computer you feel like remotely. 
+When you add new things to your config that you like you can teleport those configs, and then push them to our own GIT repository giving you instant version control for your configs. This allows you to do cool things like having experimental configs in different GIT branches and pull your GIT setup on any computer you feel like remotely. 
 
 ## Why Not Just Use An IDE?
 Here are just a few of the reasons to use NVIM over an IDE:
