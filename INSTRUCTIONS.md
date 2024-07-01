@@ -57,7 +57,10 @@ I tried to make sure that I added as few keybindings as possible to make my conf
 
 
 ## Use My Configuration Or Roll Your Own
-You can use the teleport.sh file from the folder where you cloned this project to from github using the following command ```./teleport.sh```. This will move my configuration where yours used to be and yours where mine was, then open NVIM from anywhere and the lua files in the configuration folders should take care of the rest. I really think I have a nice, simple, clean configuration with sensible keybindings and a nice colorscheme that is powerful but not full of bloat. We have telescope fuzzyfinder with GREP and file name file finding, zero-lsp armed with mason for autocomplete, linting, and formatting, as well as treesitter syntax highlighting. I even installed vertical lines so you can see where all the indentation levels line up. If you hate mine and want to go back no problem. Go back to where you cloned this project from github and run ```./teleport.sh``` again and there you go your old configuration will be right back where it was. You should also experiment making this your own configuration by adding your own plugs, keybindings, and settings knowing if you blow up your config ```./teleport.sh``` and your git hub repository has your back!
+While this project includes a config with it the ./teleport.sh bash file will work with any nvim configuration you throw at it. 
+
+### Included Nvim Configuration Features
+I have a nice, simple, clean configuration with sensible keybindings and a nice colorscheme that is powerful but not full of bloat. We have telescope fuzzyfinder with GREP and file name file finding, zero-lsp armed with mason for autocomplete, linting, and formatting, as well as treesitter syntax highlighting. I even installed vertical lines so you can see where all the indentation levels line up.
 
 
 ## :checkhealth Is Your Friend
@@ -67,7 +70,7 @@ Some troubleshooting tips:
 
 - :checkhealth and :checkhealth <plugName> are your friends. Use these to get the details you need to troubleshoot through your errors
 
-- Try using your exact error and type in the context in which you are getting that error when doing a google search. You are likely not the only person using NVIM that is experiencing your problem. You will get way better results searching "exit code 127 returns 0 when installing JavaServer LSP with Mason" than you will searching "exit code 127 returns 0". 
+- Try using your exact error and type with the context in which you are getting that error when doing a google search. You are likely not the only person using NVIM that is experiencing your problem. You will get way better results searching "exit code 127 returns 0 when installing JavaServer LSP with Mason" than you will searching "exit code 127 returns 0". 
 
 - When you have a chain of errors address the top one instead of attacking all of them. Many times the first error causes a chain reaction whereby the condition that causes the one underneath it won't happen once the first error is fixed.
 
