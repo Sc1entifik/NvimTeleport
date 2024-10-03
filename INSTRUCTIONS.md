@@ -13,15 +13,17 @@ The teleport.sh file is a BASH file which executes a series of command lines in 
 
 
 ### I Blew My Installation Up! Now What?
-This happens from time to time. You add a new plug-in or mess with your keybindings and now nothing works.
+This is where NVIM Teleport really shines. Everyone has experienced installing a new plug-in where nothing seems to work and the error messages are no help. With NVIM Teleport you just replace your working config with the last known config and then overwrite the one you hate and you are done!
 
 - Check the nvim folder where you cloned this project. 
     - If there is a working config that you like sitting there simply execute ```./teleport.sh```. Now your bad config is gone and your working config is in place.
-        - Do a ```git pull``` to overwrite the broken config with the config stored in your git repository.
+        - Do a ```git pull``` to make sure you are on the correct branch ore get you there if you are not.
+        - Once your git pull puts you on the correct branch do a ```git reset --hard```. This will replace all files not the same in the project folder with the files stored on your git branch. 
     - Neither config is working
-        - Do a ```git pull``` to overwrite the unwanted config with the last working config in your git repository. 
+        - Do a ```git pull``` to make sure you are on the correct branch ore get you there if you are not.
+        - Once your git pull puts you on the correct branch do a ```git reset --hard```. This will replace all files not the same in the project folder with the files stored on your git branch. 
         - Execute ```./teleport.sh``` to swap your bad config for the working config.
-        - Do another ```git pull``` to overwrite the broken config.
+        - Do another ```git pull``` followed by ```git reset --hard``` sequence to overwrite the broken config.
 
 
 ### I Love This New Plug-In Or Keybinding I Just Installed!
@@ -31,11 +33,16 @@ Great you experimented with your configuration and you added stuff you like!
     - Execute ```./teleport.sh``` to swap your configs so you can push your new config to your repo.
     - Do a ```git push``` to upload your new config to the repository.
     - Execute ```./teleport.sh``` to swap your config back to keep using it.
-    - Do a ```git pull``` to overwrite the old config with the new one that was pushed to your repository.
+    - Do a ```git pull``` followed by ```git reset --hard``` to overwrite the old config with the new one that was pushed to your repository.
 
 
 ## The Included Config Uses Lazy Vim
-I used Lazy Vim as the plug-in manager for the included config. You can use whatever plug-in manager you however I always found that Lazy Vim worked the best for me. 
+While I tried to make this project as unopinionated as possible I also wanted to make this config simple, work, and be batteries included for as many people as possible. To accomplish this I felt adding a plug-in manager was a necessary concession to make. I chose Lazy Vim because it has always worked for me in the past has been cleaner and easier to use than all the other plug-in managers I have tried. 
+
+If you prefer a different plug in manager the good news is the config is completely modular so all you have to do is write a .lua file for your favorite plug-in manager, delete the .lua file that configures Lazy Vim, and then modify the file that finds and loads the plug-ins to use your choice of plug-in manager instead.
+
+The way this config is set up however all you have to do to install a new plug-in is follow the instructions for any plug-in for Lazy Vim. This usually involves just grabbing a string off the git hub page, opening up the init.lua file that is sitting in the lazyVim subfoler and then putting it inside some mustache tags like so where all the other plug-ins are installed. ```{"plug-in/string/here"},```
+
 
 ## Examine The nvim Folder
 I recommend taking a bit of time to examine the nvim folder that comes with this project. Yes you can fork the repo, clone it, follow the INSTALLATION.md file, execute teleport.sh, and then never look at it or think about it again. Knowing how to configure your nvim installation, and personalize it to your liking is worth your time however.
@@ -74,5 +81,5 @@ Some troubleshooting tips:
 
 - When you have a chain of errors address the top one instead of attacking all of them. Many times the first error causes a chain reaction whereby the condition that causes the one underneath it won't happen once the first error is fixed.
 
-- Sometimes it just isn't worth fixing. Your error message is really obscure, you looked high and low but you just can't seem to fix it. While you should strive to get rid of all your errors there are a few times where it just pays to leave sleeping dogs lie. If it's something small like you can't get the linter working for a language you don't use very often and you are otherwise happy programming with your configuration that is all that really matters at the end of the day. 
+- Sometimes it just isn't worth fixing. Your error message is really obscure, you looked high and low but you just can't seem to fix it. While you should strive to get rid of all your errors there are a few times where it just pays to leave sleeping dogs lie. When it's something small like you can't get the linter working for a language you don't use very often and you are otherwise happy programming with your configuration that is all that really matters at the end of the day. 
 
