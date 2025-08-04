@@ -23,7 +23,7 @@ When you add new things to your config that you like you can teleport those conf
 ## How This Is Different 
 My project differs from all the other preloaded configs and tutorials that lead you into a dead end.
 
-- telescope.sh allows you to quicly load already working configs and gives you version control over your nvim configuration.
+- teleport.sh allows you to quicly load already working configs and gives you version control over your nvim configuration.
 - Having version control over your nvim configuration means you can quickly load your configuration to any computer you use anywhere.
 - You never again have to worry about blowing up your config by trying new features and settings.
 - No bloat config. If you don't like mine, fine. Use whatever config you like then teleport it away!
