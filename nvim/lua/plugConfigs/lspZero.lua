@@ -8,6 +8,10 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
 end)
 
+vim.diagnostic.config({
+	virtual_text = true,
+})
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
   handlers = {lsp.default_setup},
