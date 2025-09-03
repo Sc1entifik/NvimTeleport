@@ -1,4 +1,5 @@
 # NVIM Configs And NVIM Teleport Project
+If you happen to be using Arch Linux with Hyprland try the hyprland version of the config on the hyprland branch!
 
 ## Purpose
 I am creating this project to help people like myself who love NVIM but are tired of worrying about blowing up their configs every time they want to add a plug in or feature. 

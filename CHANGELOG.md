@@ -1,0 +1,2 @@
+- Added leader+e keymap which gives a pop out menu of any error or warning message. Extremely useful especially if using a tiling window manager.
+- Added transparency rule in lua/settings/init.lua which you can uncomment to add transparency to your nvim window so your terminal wwindow will show through. If this is coupled with a transparency to your terminal window you will have a see through nvim background!

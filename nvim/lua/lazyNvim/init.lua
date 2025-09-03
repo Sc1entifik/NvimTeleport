@@ -20,40 +20,40 @@ vim.opt.rtp:prepend(lazypath)
 
 --Put Plugins you wish to install here
 require('lazy').setup({
-  --colorschemes
-  {'folke/tokyonight.nvim'},
-  --mason language server support
-  {'williamboman/mason.nvim'},
-  {'williamboman/mason-lspconfig.nvim'},
-  --nvim-treesitter
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-  --telescope
-  {
-    'nvim-telescope/telescope.nvim', branch = '0.1.x',
-      dependencies = { 'nvim-lua/plenary.nvim' }
-  },
+	--colorschemes
+	{'folke/tokyonight.nvim'},
+	--mason language server support
+	{'williamboman/mason.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
+	--nvim-treesitter
+	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	--telescope
+	{
+		'nvim-telescope/telescope.nvim', branch = '0.1.x',
+		dependencies = { 'nvim-lua/plenary.nvim' }
+	},
 	--autopairs
 	{'jiangmiao/auto-pairs'},
 	--configures vertical code indentation lines
 	{ "lukas-reineke/indent-blankline.nvim" },
-  -- LSP Support
-  {
-    'VonHeikemen/lsp-zero.nvim',
-    branch = 'dev-v3',
-    lazy = true,
-    config = false,
-  },
-  {
-    'neovim/nvim-lspconfig',
-    dependencies = {
-      {'hrsh7th/cmp-nvim-lsp'},
-    }
-  },
-  -- Autocompletion
-  {
-    'hrsh7th/nvim-cmp',
-    dependencies = {
-      {'L3MON4D3/LuaSnip'}
-    },
-  },
+	-- LSP Support
+	{
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'dev-v3',
+		lazy = true,
+		config = false,
+	},
+	{
+		'neovim/nvim-lspconfig',
+		dependencies = {
+			{'hrsh7th/cmp-nvim-lsp'},
+	}
+	},
+	-- Autocompletion
+	{
+		'hrsh7th/nvim-cmp',
+		dependencies = {
+			{'L3MON4D3/LuaSnip'}
+		},
+	},
 })
