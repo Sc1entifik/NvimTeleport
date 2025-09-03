@@ -20,40 +20,59 @@ vim.opt.rtp:prepend(lazypath)
 
 --Put Plugins you wish to install here
 require('lazy').setup({
-	--colorschemes
-	{'folke/tokyonight.nvim'},
-	--mason language server support
-	{'williamboman/mason.nvim'},
-	{'williamboman/mason-lspconfig.nvim'},
-	--nvim-treesitter
-	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-	--telescope
+	--Ghostty Theme Sync
 	{
-		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+		'landerson02/ghostty-theme-sync.nvim',
+		--- @type GhosttySyncConfig
+		opts = {
+			ghostty_config_path = vim.fn.expand("~/.config/ghostty/config"),
+			persist_nvim_theme = true,
+			nvim_config_path = vim.fn.expand("~/.config/nvim/lua/settings/init.lua"),
+		},
 	},
+  --colorschemes
+  {'folke/tokyonight.nvim'},
+	{
+    "baliestri/aura-theme",
+    lazy = false,
+    priority = 1000,
+    config = function(plugin)
+      vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
+      vim.cmd([[colorscheme aura-dark]])
+    end
+  },
+  --mason language server support
+  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
+  --nvim-treesitter
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  --telescope
+  {
+    'nvim-telescope/telescope.nvim', branch = '0.1.x',
+      dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 	--autopairs
 	{'jiangmiao/auto-pairs'},
 	--configures vertical code indentation lines
 	{ "lukas-reineke/indent-blankline.nvim" },
-	-- LSP Support
-	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'dev-v3',
-		lazy = true,
-		config = false,
-	},
-	{
-		'neovim/nvim-lspconfig',
-		dependencies = {
-			{'hrsh7th/cmp-nvim-lsp'},
-	}
-	},
-	-- Autocompletion
-	{
-		'hrsh7th/nvim-cmp',
-		dependencies = {
-			{'L3MON4D3/LuaSnip'}
-		},
-	},
+  -- LSP Support
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'dev-v3',
+    lazy = true,
+    config = false,
+  },
+  {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      {'hrsh7th/cmp-nvim-lsp'},
+    }
+  },
+  -- Autocompletion
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      {'L3MON4D3/LuaSnip'}
+    },
+  },
 })
