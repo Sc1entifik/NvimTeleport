@@ -1,6 +1,4 @@
--- Vim Leader Key keybindings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-
--- Vim pop out error message binding
-vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
+vim.keymap.set("i", "<C-y>", "<NOP>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true, desc = "Show diagnostics in float" })
